@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 35</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algorithm 35</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Read name, e-mail, telephone number and print them.
+        </p>
+        Enter <br>
+        Name: <input type="text" name="" id="name"><br>
+        E-mail: <input type="email" name="" id="email"><br>
+        Telephone: <input type="number" name="" id="number"><br>
+        <input type="button" value="analyze" onclick="analyze()">
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+
+        function analyze(){
+
+            let name = document.getElementById('name').value
+            let email = document.getElementById('email').value
+            let tel = document.getElementById('number').value
+            let res = document.getElementById('res')
+            
+            if ((name.length == 0) || (email.length == 0) || (tel.length == 0)){
+                window.alert('Enter all the information!')
+
+            } else {
+
+                res.innerHTML = `<br> Name: ${name} <br> E-mail: ${email} <br> Telephone: ${tel}` 
+
+            }
+        }
+    </script>
+</body>
+</html>
