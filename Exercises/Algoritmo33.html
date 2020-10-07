@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 33</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 10px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Algorithm 33</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Read two integer numbers and print them.
+        </p>
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res">Here... </p>
+        <p id="numb"></p>
+    </div>
+
+    <script>
+        let number1 = window.prompt('Enter the first number')
+        let number2 = window.prompt('Enter the second number')
+
+        let n1 = Number(number1)
+        let n2 = Number(number2)
+        
+        let numb = document.getElementById('numb')
+        let res = document.getElementById('res')
+        
+        res.innerHTML = (`You have entered the numbers: ${n1} and ${n2}`)
+
+        if (n1 % 1 == 0)  {
+            numb.innerHTML = `${n1} is an integer </br>`
+        } else {
+            numb.innerHTML = `${n1} is not an integer </br>`
+        }
+
+        if (n2 % 1 == 0) {
+            numb.innerHTML += `${n2} is an integer`
+        } else {
+            numb. innerHTML += `${n2} is not an integer` 
+        }
+        
+    </script>
+</body>
+</html>
