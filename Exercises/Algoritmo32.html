@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 32</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Algorithm 32</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Read a number and print it.
+        </p>
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res"> Here... </p>
+        <p id="integer"></p>
+    </div>
+
+    <script>
+        let number1 = window.prompt('Enter an integer number')
+
+        let n1 = Number(number1)
+        
+        let integer = document.getElementById('integer')
+        let res = document.getElementById('res')
+        
+        res.innerHTML = `You have entered the number: ${n1}`
+
+        if (n1 % 1 == 0) {
+            integer.innerHTML += `${n1} is an integer`
+
+        } else {
+            integer.innerHTML += `${n1} is not an integer`
+
+        }
+        
+    </script>
+</body>
+</html>
