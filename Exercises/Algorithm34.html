@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 34</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 10px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Algorithm 34</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Read an integer number, print its successor and predecessor.
+        </p>
+        Enter the number: <input type="number" name="" id="data"> <input type="button" value="analyze" onclick="analyze()">
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="number"></p>
+    </div>
+
+    <script>
+        function analyze(){
+
+            let nData = document.getElementById('data').value
+            let data = Number(nData)
+
+            let res = document.getElementById('number')
+            res.innerHTML = `You have entered the number: <strong>${data}</strong> <br>`
+
+            let successor = data + 1
+            let predecessor = data - 1
+
+            if (data % 1 == 0) {
+                res.innerHTML += `${data} is an integer <br>`
+                res.innerHTML += `The successor is: ${successor} <br>`
+                res.innerHTML += `The predecessor is: ${predecessor} <br>` 
+
+            } else {
+                res.innerHTML = `${data} is not an integer`
+
+            }
+        }
+         
+    </script>
+</body>
+</html>
