@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 29</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Algorithm 28</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Print your name.
+        </p>
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res">Here... </p>
+    </div>
+
+    <script>
+        let name = window.prompt('What is your name?')
+        document.getElementById('res').innerHTML = `Hello, ${name}, have a nice day.`
+    </script>
+</body>
+</html>
