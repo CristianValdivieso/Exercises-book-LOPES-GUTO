@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 36</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algorithm 36</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Read two integer numbers and print the sum.
+        </p>
+
+        <input type="number" name="" id="number1">
+        <input type="number" name="" id="number2">
+        <input type="button" value="sum" onclick="sum()">
+
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        
+        function sum(){
+            let tnumber1 = document.getElementById('number1').value
+            let tnumber2 = document.getElementById('number2').value
+            let number1 = Number(tnumber1)
+            let number2 = Number(tnumber2)
+            let sum = number1 + number2
+            
+            if ((tnumber1.length == 0) || (tnumber2.length == 0)){
+                window.alert('Complete all the information!')
+
+            } else if ((number1 % 1 == 0) && (number2 % 1 == 0)){
+                let res = document.getElementById('res')
+                res.innerHTML = `Sum: ${sum}`
+
+            } else {
+                res.innerHTML = "You have not entered an integer value"
+
+            }   
+        }
+
+    </script>
+</body>
+</html>
