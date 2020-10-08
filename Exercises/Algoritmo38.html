@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 38</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algorithm 38</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Read a number and print its third part.
+        </p>
+        <input type="number" name="" id="number1">        
+        <input type="button" value="operar" onclick="analyze()">
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        
+        function analyze(){
+
+            let tnumber = document.getElementById('number1').value
+            let number = Number(tnumber)
+            
+            if(tnumber.length == 0){
+                window.alert("Enter the number!")
+
+            } else{
+                let terPart = number / 3
+                let res = document.getElementById('res')
+                res.innerHTML = `The third part of ${number} is: ${terPart.toFixed(2)}`
+
+            }  
+        }
+
+    </script>
+</body>
+</html>
