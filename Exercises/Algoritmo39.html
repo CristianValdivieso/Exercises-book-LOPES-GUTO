@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 39</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algorithm 39</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Enter two values and print the arithmetic mean.
+        </p>
+        <input type="number" name="" id="number1">    
+        <input type="number" name="" id="number2">    
+        <input type="button" value="run" onclick="analyze()">
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        
+        function analyze(){
+
+            let tn1 = document.getElementById('number1').value
+            let tn2 = document.getElementById('number2').value
+            let n1 = Number(tn1)
+            let n2 = Number(tn2)
+            let res = document.getElementById('res')
+
+            if ((tn1.length == 0) || (tn2.length == 0)){
+                window.alert('Insert the values!')
+
+            } else{
+                let aMean = (n1 + n2)/2
+                res.innerHTML = `Arithmetic Mean: ${aMean.toFixed(2)}`
+
+            }
+        }
+    
+    </script>
+</body>
+</html>
