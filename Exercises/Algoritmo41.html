@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 41</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algorithm 41</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Enter four numbers and print the <strong>weighted average</strong>.<br>The weights are: 1, 2, 3, 4. 
+        </p>
+
+        Number 1: <input type="number" name="" id="number1"><br>
+        Number 2: <input type="number" name="" id="number2"><br> 
+        Number 3: <input type="number" name="" id="number3"><br>
+        Number 4: <input type="number" name="" id="number4"><br>   
+        <input type="button" value="run" onclick="analyze()">
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        function analyze(){
+
+            let tn1 = document.getElementById('number1').value
+            let tn2 = document.getElementById('number2').value
+            let tn3 = document.getElementById('number3').value
+            let tn4 = document.getElementById('number4').value
+            let n1 = Number(tn1)
+            let n2 = Number(tn2)
+            let n3 = Number(tn3)
+            let n4 = Number(tn4)
+
+            let res = document.getElementById('res')
+
+            if ((tn1.length == 0) || (tn2.length == 0) || (tn3.length == 0) || (tn4.length == 0)){
+                window.alert('Enter all values')
+
+            } else {
+                let wAverage = ((n1*1)+(n2*2)+(n3*3)+(n4*4))/(1+2+3+4)
+                res.innerHTML = `Weighted average: ${wAverage}`
+
+            }
+        }
+    
+    </script>
+</body>
+</html>
