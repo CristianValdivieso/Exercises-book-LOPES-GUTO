@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 40</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algorithm 40</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Enter two integer numbers and print.<br>
+            Dividend:<br>Divisor:<br>Quotient:<br>Remainder:
+        </p>
+        Dividend:<input type="number" name="" id="number1"><br>
+        Divisor:<input type="number" name="" id="number2"><br>    
+        <input type="button" value="run" onclick="analyze()">
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+
+        function analyze(){
+
+            let tn1 = document.getElementById('number1').value
+            let tn2 = document.getElementById('number2').value
+            let n1 = Number(tn1)
+            let n2 = Number(tn2)
+            let res = document.getElementById('res')
+
+            if ((tn1.length == 0) || (tn2.length == 0)){
+                window.alert('Enter all values!')
+
+            } else if ((n1 % 1 == 0) && (n2 % 1 == 0)){
+                let dividend = n1
+                let divisor = n2
+                let quotient = n1 / n2
+                let remainder = n1 % n2
+
+                res.innerHTML = `Dividend: ${dividend}<br>`
+                res.innerHTML += `Divisor: ${divisor}<br>`
+                res.innerHTML += `Quotient: ${quotient.toFixed(3)}<br>`
+                res.innerHTML += `Remainder: ${remainder}`
+
+            } else {
+                window.alert('One of the numbers is not an integer!')
+
+            }
+        }
+    
+    </script>
+</body>
+</html>
