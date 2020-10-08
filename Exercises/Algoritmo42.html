@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 42</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algorithm 42</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Enter an angle in degrees and print:<br>
+            <ul>
+                <li>Sine</li>
+                <li>Cosine</li>
+                <li>Tangent</li>
+                <li>Cotangent</li>
+                <li>Secant</li>
+                <li>Cosecant</li>
+            </ul>
+            <strong>ATTENTION: </strong>Some angles may not have answer, then will be done a complete solution.
+        </p>
+
+        Angle in degrees: <input type="number" name="" id="angle">   
+        <input type="button" value="calculate" onclick="analyze()">
+
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+
+        function analyze(){
+
+            let tAngle = document.getElementById('angle').value
+            let angle = Number(tAngle)
+            let rad = angle * Math.PI / 180
+            
+            let sine = Math.sin(rad)
+            let cosine = Math.cos(rad)
+            let tangent = Math.tan(rad)
+            let cotangent = 1 / Math.tan(rad)
+            let secant = 1 / Math.cos(rad)
+            let cosecant = 1 / Math.sin(rad)
+
+            let res = document.getElementById('res')
+            
+            res.innerHTML = `Sine: ${sine.toFixed(2)}<br>`
+            res.innerHTML += `Cosine: ${cosine.toFixed(2)}<br>`
+            res.innerHTML += `Tangent: ${tangent.toFixed(2)}<br>`
+            res.innerHTML += `Cotangent: ${cotangent.toFixed(2)}<br>`
+            res.innerHTML += `Secant: ${secant.toFixed(2)}<br>`
+            res.innerHTML += `Cosecant: ${cosecant.toFixed(2)}`
+        }
+    
+    </script>
+</body>
+</html>
