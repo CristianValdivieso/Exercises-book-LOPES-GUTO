@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 45</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algorithm 45</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Enter a number and print: <br>
+            <strong>Number, squared number (2), square root.</strong>
+        </p>
+
+        Number: <input type="number" name="" id="number"><br>
+        <input type="button" value="calculate" onclick="analyze()">
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+
+        function analyze(){
+
+            let tNum = document.getElementById('number').value
+            let num = Number(tNum)
+            let res = document.getElementById('res')
+            let squared = num ** 2
+            let root = Math.sqrt(num)
+
+            //If the number was not inserted, then...
+            if (tNum.length == 0){
+                window.alert('Values missing! Complete the field')
+
+            }    
+            //If the inserted number is negative, then...
+            if(num < 0){
+                root = Math.sqrt(num * -1)
+                res.innerHTML = `Número: ${num}<br>Número al cuadrado: ${squared}<br>Raíz cuadrada: ${root.toFixed(2)}`
+
+            } else {
+                res.innerHTML = `Número: ${num}<br>Número al cuadrado: ${squared}<br>Raíz cuadrada: ${root.toFixed(2)}`
+  
+            } 
+        }
+    </script>
+</body>
+</html>
