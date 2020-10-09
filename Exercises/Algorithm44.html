@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 44</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algorithm 44</h1>
+    <div>
+        <h2>Task</h2>
+
+        <p>
+            Enter <strong>number / base</strong> to calculate the logarithm.<br>
+            Print the outcome.
+        </p>
+
+        Enter the number: <input type="number" name="" id="number">
+        Enter the base: <input type="number" name="" id="base">
+        <input type="button" value="calculate" onclick="logarithm()">
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+
+        function logarithm(){
+
+            let tNum = document.getElementById('number').value
+            let tBase = document.getElementById('base').value
+            let num = Number(tNum)
+            let base = Number(tBase)
+
+            if ((tNum.length == 0) || (tBase.length == 0)){
+                window.alert('Complete all the fields!')
+
+            } else {
+                let log = Math.log(num) / Math.log(base)
+                let res = document.getElementById('res')
+                res.innerHTML = `Logaritmo: ${log.toFixed(3)}`
+            }
+        }
+
+    </script>
+</body>
+</html>
