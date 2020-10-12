@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 51</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algorithm 51</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Enter the radio of a circle and print (in cm):
+            <ul>
+                <li>Perimeter</li>
+                <li>Area</li>
+            </ul>
+        </p>
+        
+        Radio: <input type="number" name="" id="radio">
+        <input type="button" value="calculate" onclick="circle()">
+
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        
+        function circle(){
+
+            let tRadio = document.getElementById('radio').value
+            let radio = Number(tRadio)
+            let perimeter = Math.PI * 2 * radio
+            let area = Math.PI * (radio ** 2)
+            let res = document.getElementById('res')
+
+            if(tRadio.length == 0){
+                window.alert('Enter the value!')
+
+            } else {
+                res.innerHTML = `Perimeter: ${perimeter.toFixed(2)}<br>`
+                res.innerHTML += `Area: ${area.toFixed(2)}`
+
+            }
+        }
+        
+    </script>
+</body>
+</html>
