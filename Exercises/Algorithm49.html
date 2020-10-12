@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 49</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algorithm 49</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Enter your name and print.
+            <ul>
+                <li>Full name</li>
+                <li>First character</li>
+                <li>Last character</li>
+                <li>From first to third character</li>
+                <li>Fourth  character</li>
+                <li>All but the first</li>
+                <li>The last two characters</li>
+            </ul>
+        </p>
+        
+        Name: <input type="text" name="" id="name"><br>
+        <input type="button" value="analyze" onclick="analyze()">
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+
+        function analyze(){
+
+            let name = document.getElementById('name').value
+            let res = document.getElementById('res')
+
+            res.innerHTML = `Full name: ${name}<br>
+            First character: ${name.charAt(0)}<br>
+            Last character: ${name.charAt(name.length-1)}<br>
+            From first to third: ${name.slice(0, 3)}<br>
+            Fourth character: ${name.charAt(3)}<br>
+            All but the first: ${name.slice(1, name.length)}<br>
+            The last two characters: ${name.substr(name.length - 2)}`
+        }
+        
+    </script>
+</body>
+</html>
