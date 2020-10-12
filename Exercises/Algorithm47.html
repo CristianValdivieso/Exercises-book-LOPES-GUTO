@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 47</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algorithm 47</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Enter a number in CDU format and print it inverted: UDC. <br>
+            Example: 123 goes to 321. Save the number on another variable before print it. 
+        </p>
+
+        Value: <input type="number" name="" id="value">
+        <input type="button" value="execute" onclick="analyze()">
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+
+        function analyze() {
+
+            let tValue = document.getElementById('value').value
+            let value = Number(tValue)
+            let res = document.getElementById('res')
+            
+            let tReversed = value.toString().split('').reverse().join('')
+            let reversed = Number(tReversed)
+            res.innerHTML = `Invertido: ${reversed}` 
+
+        }
+
+    </script>
+</body>
+</html>
