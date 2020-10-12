@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 46</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algorithm 46</h1>
+    <div>
+        <h2>Task</h2>
+
+        <p>
+            Enter the account balance of an application and print the new account balance with an adjust of 1%.
+        </p>
+        Account balance: <input type="number" name="" id="acBal"><br>
+        <input type="button" value="calculate" onclick="analizar()">
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        function analizar(){
+            let tAccBal = document.getElementById('acBal').value
+            let accBal = Number(tAccBal)
+            let res = document.getElementById('res')
+            let newAccBal = accBal * 1.01
+                        
+            res.innerHTML = `New account balance: ${newAccBal}`
+        }
+    </script>
+</body>
+</html>
