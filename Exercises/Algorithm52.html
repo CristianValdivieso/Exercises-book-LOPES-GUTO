@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 52</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algorithm 52</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Enter the side of a square and print (in cm):
+            <ul>
+                <li>Perimeter</li>
+                <li>Diagonal</li>
+                <li>Area</li>
+            </ul>
+        </p>
+        
+        Side: <input type="number" name="" id="side">
+        <input type="button" value="calculate" onclick="square()">
+
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        
+       function square(){
+
+           let tSide = document.getElementById('side').value
+           let side = Number(tSide)
+
+           if (tSide.length == 0){
+               window.alert('Enter a value!')
+
+           } else if (side < 0) {
+               window.alert('Only positive values')
+
+           } else {
+               let res = document.getElementById('res')
+               let perimeter = 4 * side
+               let diagonal = side * Math.sqrt(2)
+               let area = side ** 2
+
+               res.innerHTML = `Perímetro: ${perimeter}<br>`
+               res.innerHTML += `Diagonal: ${diagonal.toFixed(2)}<br>`
+               res.innerHTML += `Área: ${area}`
+
+           }
+       }
+        
+    </script>
+</body>
+</html>
