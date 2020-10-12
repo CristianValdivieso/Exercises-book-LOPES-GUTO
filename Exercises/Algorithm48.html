@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 48</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algorithm 48</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Considering that 100 kilowatts energy costs 1/7 part of the minimum salary, create an algorithm that recieves the value of the minimum salary and the quantity of kilowatts consumed. Calculate and print.<br>
+            <p><strong>Aditional info:</strong> Average consumption 400 kWh/mes. Minimum salary in Brasil R$ 1.045,00</p>
+
+            <ul>
+                <li>The value of each kilowatt</li>
+                <li>The value to pay</li>
+                <li>The new value to pay with 10% of discount</li>
+            </ul>
+        </p>
+        
+        Value of minimum salary: <input type="number" name="" id="salary"><br>
+        Consumption Wh/month: <input type="number" name="" id="kilowatts"><br>
+        <input type="button" value="calculate" onclick="consumption()">
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+
+        function consumption(){
+
+            let tSalary = document.getElementById('salary').value
+            let tKwh = document.getElementById('kilowatts').value
+            let salary = Number(tSalary)
+            let kwh = Number(tKwh)
+
+            let unidadKwh = (salary/700)
+            let payment = unidadKwh * kwh     
+            let payDiscount = payment * 0.9   
+
+            let res = document.getElementById('res')
+            res.innerHTML = `Price of 1 kWh: ${unidadKwh.toFixed(2)}<br>Value to pay by month: ${payment.toFixed(2)}<br>Value by month with 10% of discount: ${payDiscount.toFixed(2)}` 
+
+        }
+
+    </script>
+</body>
+</html>
