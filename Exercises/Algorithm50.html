@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm 50</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algorithm 50</h1>
+    <div>
+        <h2>Task</h2>
+        <p>
+            Enter base and height of a rectangle and print (in cm):
+            <ul>
+                <li>Perimeter</li>
+                <li>Area</li>
+                <li>Diagonal</li>
+            </ul>
+        </p>
+        
+        Base: <input type="text" name="" id="base"><br>
+        Height: <input type="text" name="" id="height"><br>
+        <input type="button" value="calculate" onclick="calculate()">
+    </div>
+
+    <div class="div2">
+        <h3>Result</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        function calculate(){
+
+            let tBase = document.getElementById('base').value
+            let tHeight = document.getElementById('height').value
+            let base = Number(tBase)
+            let height = Number(tHeight)
+
+            if((tBase.length == 0) || (tHeight.length == 0)){
+                window.alert('Complete all the fields')
+
+            } else if ((base < 0) || (height < 0)){
+                window.alert('Has ingresado valores negativos!')
+
+            } else {
+                let perimeter = (2*base) + (2*height)
+                let area = base * height
+                let diagonal = Math.sqrt((height ** 2 ) + (base ** 2))
+
+                let res = document.getElementById('res')
+                res.innerHTML = `Perimeter: ${perimeter}<br>`
+                res.innerHTML += `Area: ${area}<br>`
+                res.innerHTML += `Diagonal: ${diagonal.toFixed(2)}`
+
+            }
+        }
+        
+    </script>
+</body>
+</html>
