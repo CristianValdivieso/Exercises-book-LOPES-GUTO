@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 53</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algoritmo 53</h1>
+    <div>
+        <h2>Tarea</h2>
+        <p>
+            Ingrese los lados <strong>a, b, c</strong>  de un paralelepípedo e imprima la diagonal (en cm):
+        </p>
+        
+        Lado a: <input type="number" name="" id="ladoA"><br>
+        Lado b: <input type="number" name="" id="ladoB"><br>
+        Lado c: <input type="number" name="" id="ladoC"><br>
+        <input type="button" value="calcular" onclick="calcular()">
+
+    </div>
+
+    <div class="div2">
+        <h3>Resultado</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        
+       function calcular(){
+           let tLadoA = document.getElementById('ladoA').value
+           let tLadoB = document.getElementById('ladoB').value
+           let tLadoC = document.getElementById('ladoC').value
+
+           let ladoA = Number(tLadoA)
+           let ladoB = Number(tLadoB)
+           let ladoC = Number(tLadoC)
+
+           if((tLadoA.length == 0) || (tLadoB.length == 0) || (tLadoC.length == 0)){
+               window.alert('Ingrese todos los datos')
+           } else if((ladoA < 0) || (ladoB < 0) || (ladoC < 0)){
+               window.alert('Ha ingresado números negativos!')
+           } else {
+               let res = document.getElementById('res')
+               let diagonal = Math.sqrt((ladoA ** 2) + (ladoB ** 2) + (ladoC ** 2))
+
+               res.innerHTML = `Diagonal: ${diagonal}`
+           }
+       }     
+        
+    </script>
+</body>
+</html>
