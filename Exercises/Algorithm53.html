@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algoritmo 53</title>
+    <title>Algorithm 53</title>
     <style>
         h1{
             text-align: center;
@@ -26,45 +26,48 @@
     </style>
 </head>
 <body>
-    <h1>Algoritmo 53</h1>
+    <h1>Algorithm 53</h1>
     <div>
-        <h2>Tarea</h2>
+        <h2>Task</h2>
         <p>
-            Ingrese los lados <strong>a, b, c</strong>  de un paralelepípedo e imprima la diagonal (en cm):
+            Enter the sides <strong>a, b, c</strong> of a parallelepiped and print the diagonal (in cm):
         </p>
         
-        Lado a: <input type="number" name="" id="ladoA"><br>
-        Lado b: <input type="number" name="" id="ladoB"><br>
-        Lado c: <input type="number" name="" id="ladoC"><br>
-        <input type="button" value="calcular" onclick="calcular()">
+        Side a: <input type="number" name="" id="sideA"><br>
+        Side b: <input type="number" name="" id="sideB"><br>
+        Side c: <input type="number" name="" id="sideC"><br>
+        <input type="button" value="calculate" onclick="diagonal()">
 
     </div>
 
     <div class="div2">
-        <h3>Resultado</h3>
+        <h3>Result</h3>
         <p id="res"></p>
     </div>
 
     <script>
         
-       function calcular(){
-           let tLadoA = document.getElementById('ladoA').value
-           let tLadoB = document.getElementById('ladoB').value
-           let tLadoC = document.getElementById('ladoC').value
+       function diagonal(){
+           let tSideA = document.getElementById('sideA').value
+           let tSideB = document.getElementById('sideB').value
+           let tSideC = document.getElementById('sideC').value
 
-           let ladoA = Number(tLadoA)
-           let ladoB = Number(tLadoB)
-           let ladoC = Number(tLadoC)
+           let sideA = Number(tSideA)
+           let sideB = Number(tSideB)
+           let sideC = Number(tSideC)
 
-           if((tLadoA.length == 0) || (tLadoB.length == 0) || (tLadoC.length == 0)){
-               window.alert('Ingrese todos los datos')
-           } else if((ladoA < 0) || (ladoB < 0) || (ladoC < 0)){
-               window.alert('Ha ingresado números negativos!')
+           if((tSideA.length == 0) || (tSideB.length == 0) || (tSideC.length == 0)){
+               window.alert('Enter all the informations')
+
+           } else if((sideA < 0) || (sideB < 0) || (sideC < 0)){
+               window.alert('You have inserted negative numbers!')
+
            } else {
                let res = document.getElementById('res')
-               let diagonal = Math.sqrt((ladoA ** 2) + (ladoB ** 2) + (ladoC ** 2))
+               let diagonal = Math.sqrt((sideA ** 2) + (sideB ** 2) + (sideC ** 2))
 
-               res.innerHTML = `Diagonal: ${diagonal}`
+               res.innerHTML = `Diagonal: ${diagonal.toFixed(3)}`
+
            }
        }     
         
