@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 54</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algoritmo 54</h1>
+    <div>
+        <h2>Tarea</h2>
+        <p>
+            Ingrese <strong>base, altura</strong> e imprima el área de un triángulo (en cm):
+        </p>
+        
+        Base: <input type="number" name="" id="base"><br>
+        Altura: <input type="number" name="" id="altura"><br>
+        <input type="button" value="calcular" onclick="calcular()">
+
+    </div>
+
+    <div class="div2">
+        <h3>Resultado</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        function calcular(){
+
+            let tBase = document.getElementById('base').value
+            let tAltura = document.getElementById('altura').value
+            let base = Number(tBase)
+            let altura = Number(tAltura)
+
+            if ((tBase.length == 0) || (tAltura.length == 0)){
+
+                window.alert('Ingrese los datos')
+
+            } else if ((tBase < 0) || (tAltura < 0)) {
+
+                window.alert('Ha ingresado datos negativos')
+
+            } else {
+
+                let res = document.getElementById('res')
+                let area = (base * altura) / 2
+
+                res.innerHTML = `Área: ${area}`
+            }    
+        }
+        
+    </script>
+</body>
+</html>
