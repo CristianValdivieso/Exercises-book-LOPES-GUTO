@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algoritmo 55</title>
+    <title>Algorithm 55</title>
     <style>
         h1{
             text-align: center;
@@ -26,44 +26,44 @@
     </style>
 </head>
 <body>
-    <h1>Algoritmo 55</h1>
+    <h1>Algorithm 55</h1>
     <div>
-        <h2>Tarea</h2>
+        <h2>Task</h2>
         <p>
-            Cree un algoritmo que calcule e imprima el área de un losango (en cm):
+            Create an algorithm to calculate and print the area of lozenge (in cm):
         </p>
         
-        Diagonal mayor: <input type="number" name="" id="dMayor"><br>
-        Diagonal menor: <input type="number" name="" id="dMenor"><br>
-        <input type="button" value="calcular" id="calculate">
+        Major diagonal: <input type="number" name="" id="majorD"><br>
+        Minor diagonal: <input type="number" name="" id="minorD"><br>
+        <input type="button" value="calculate" id="calculate">
 
     </div>
 
     <div class="div2">
-        <h3>Resultado</h3>
+        <h3>Result</h3>
         <p id="res"></p>
     </div>
 
     <script>
         
-        document.getElementById('calculate').addEventListener('click', calcular)
+        document.getElementById('calculate').addEventListener('click', lozenge)
         
-        function calcular(){
+        function lozenge(){
 
-            let tDiagMayor = document.getElementById('dMayor').value
-            let tDiagMenor = document.getElementById('dMenor').value
-            let dMayor = Number(tDiagMayor)
-            let dMenor = Number(tDiagMenor)
+            let tMajorD = document.getElementById('majorD').value
+            let tMinorD = document.getElementById('minorD').value
+            let majorD = Number(tMajorD)
+            let minorD = Number(tMinorD)
 
-            if((tDiagMayor.length == 0) || (tDiagMenor.length == 0)){
-                window.alert('Ingrese todos los datos')
+            if((tMajorD.length == 0) || (tMinorD.length == 0)){
+                window.alert('Enter all values')
 
-            } else if ((dMayor < 0) || (dMenor < 0)){
-                window.alert('Ingrese valores positivos')
+            } else if ((majorD < 0) || (minorD < 0)){
+                window.alert('Insert only positive values!')
 
             } else {
                 let res = document.getElementById('res')
-                let area = (dMayor * dMenor) / 2
+                let area = (majorD * minorD) / 2
 
                 res.innerHTML = `Área: ${area}` 
 
