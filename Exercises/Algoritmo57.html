@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 57</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(127, 75, 223);
+            padding: 15px;
+        }
+        div{
+            margin-top: 50px;
+            border: 1px solid rgb(30, 233, 30);
+            padding: 15px;
+        }
+        .div2{
+            background-color: rgb(22, 231, 67);
+            border: 1px solid white;
+        }
+        input{
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algoritmo 57</h1>
+    <div>
+        <h2>Tarea</h2>
+        <p>
+            Ingrese las notas PR1 y PR2 e imprima la media final:
+            <ul>
+                <li>Truncada</li>
+                <li>Arredondada</li>
+            </ul>
+        </p>
+        
+        Digite pr1: <input type="text" name="" id="pr1"><br>
+        Digite pr2: <input type="number" name="" id="pr2"><br>
+        <input type="button" value="analizar" id="calculate">
+
+    </div>
+
+    <div class="div2">
+        <h3>Resultado</h3>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        
+        document.getElementById('calculate').addEventListener('click', calcular)
+
+        function calcular(){
+
+            let tPR1 = document.getElementById('pr1').value
+            let tPR2 = document.getElementById('pr2').value
+            let pr1 = Number(tPR1)
+            let pr2 = Number(tPR2)
+
+            if ((tPR1.length == 0) || (tPR2.length == 0)){
+                window.alert('Datos incompletos!')
+
+            } else if ((pr1 < 0) || (pr2 < 0)){
+                window.alert('Ingrese datos positivos!')
+
+            } else {
+                let res = document.getElementById('res')
+                let mediaFinal = (pr1 + pr2) / 2
+                let mTruncada = (mediaFinal - 0.5) + 0.001
+                let mArredondada = Math.round(mediaFinal)
+
+                res.innerHTML += `Media arredondada: ${mediaFinal}<br>`
+                res.innerHTML += `Media truncada: ${mTruncada}<br>`
+                res.innerHTML += `Media arredondada: ${mArredondada}`
+            }
+        }
+        
+    </script>
+</body>
+</html>
