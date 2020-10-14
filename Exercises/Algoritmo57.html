@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algoritmo 57</title>
+    <title>Algorithm 57</title>
     <style>
         h1{
             text-align: center;
@@ -26,33 +26,33 @@
     </style>
 </head>
 <body>
-    <h1>Algoritmo 57</h1>
+    <h1>Algorithm 57</h1>
     <div>
-        <h2>Tarea</h2>
+        <h2>Task</h2>
         <p>
-            Ingrese las notas PR1 y PR2 e imprima la media final:
+            Enter the notes PR1 and PR2, print the final average:
             <ul>
-                <li>Truncada</li>
-                <li>Arredondada</li>
+                <li>Truncated</li>
+                <li>Rounding</li>
             </ul>
         </p>
         
-        Digite pr1: <input type="text" name="" id="pr1"><br>
-        Digite pr2: <input type="number" name="" id="pr2"><br>
-        <input type="button" value="analizar" id="calculate">
+        Insert pr1: <input type="text" name="" id="pr1"><br>
+        Insert pr2: <input type="number" name="" id="pr2"><br>
+        <input type="button" value="analyze" id="calculate">
 
     </div>
 
     <div class="div2">
-        <h3>Resultado</h3>
+        <h3>Result</h3>
         <p id="res"></p>
     </div>
 
     <script>
         
-        document.getElementById('calculate').addEventListener('click', calcular)
+        document.getElementById('calculate').addEventListener('click', finalMean)
 
-        function calcular(){
+        function finalMean(){
 
             let tPR1 = document.getElementById('pr1').value
             let tPR2 = document.getElementById('pr2').value
@@ -60,20 +60,20 @@
             let pr2 = Number(tPR2)
 
             if ((tPR1.length == 0) || (tPR2.length == 0)){
-                window.alert('Datos incompletos!')
+                window.alert('Complete all data!')
 
             } else if ((pr1 < 0) || (pr2 < 0)){
-                window.alert('Ingrese datos positivos!')
+                window.alert('Enter only positive numbers!')
 
             } else {
                 let res = document.getElementById('res')
-                let mediaFinal = (pr1 + pr2) / 2
-                let mTruncada = (mediaFinal - 0.5) + 0.001
-                let mArredondada = Math.round(mediaFinal)
+                let finalMean = (pr1 + pr2) / 2
+                let trunc = (finalMean - 0.5) + 0.001
+                let rounding = Math.round(finalMean)
 
-                res.innerHTML += `Media arredondada: ${mediaFinal}<br>`
-                res.innerHTML += `Media truncada: ${mTruncada}<br>`
-                res.innerHTML += `Media arredondada: ${mArredondada}`
+                res.innerHTML += `Media arredondada: ${finalMean}<br>`
+                res.innerHTML += `Media truncada: ${trunc}<br>`
+                res.innerHTML += `Media arredondada: ${rounding}`
             }
         }
         
