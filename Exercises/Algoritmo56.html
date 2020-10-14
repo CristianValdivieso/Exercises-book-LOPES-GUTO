@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algoritmo 56</title>
+    <title>Algorithm 56</title>
     <style>
         h1{
             text-align: center;
@@ -26,48 +26,47 @@
     </style>
 </head>
 <body>
-    <h1>Algoritmo 56</h1>
+    <h1>Algorithm 56</h1>
     <div>
-        <h2>Tarea</h2>
+        <h2>Task</h2>
         <p>
-            Ingrese nombre y edad. Imprima la salida:
+            Enter name and age. Print the output:
             <ul>
-                <li>Nombre</li>
-                <li>Edad</li>
+                <li>Name</li>
+                <li>Age</li>
             </ul>
         </p>
         
-        Nombre: <input type="text" name="" id="nombre"><br>
-        Edad: <input type="number" name="" id="edad"><br>
-        <input type="button" value="analizar" id="calculate">
-
+        Name: <input type="text" name="" id="name"><br>
+        Age: <input type="number" name="" id="age"><br>
+        <input type="button" value="analyze" id="calculate">
     </div>
 
     <div class="div2">
-        <h3>Resultado</h3>
+        <h3>Result</h3>
         <p id="res"></p>
     </div>
 
     <script>
 
-        document.getElementById('calculate').addEventListener('click', calcular)
+        document.getElementById('calculate').addEventListener('click', execute)
 
-        function calcular(){
+        function execute(){
             
-            let tNombre = document.getElementById('nombre').value
-            let tEdad = document.getElementById('edad').value
-            let edad = Number(tEdad)
+            let tName = document.getElementById('name').value
+            let tAge = document.getElementById('age').value
+            let age = Number(tAge)
 
-            if ((tNombre.length == 0) || (tEdad.length == 0)){
-                window.alert('Ingrese todos los datos')
+            if ((tName.length == 0) || (tAge.length == 0)){
+                window.alert('Enter all data')
 
-            } else if (edad < 0){
-                window.alert('Ha ingresado un valor negativo')
+            } else if (age < 0){
+                window.alert('Enter only positive numbers, please!')
 
             } else {
                 let res = document.getElementById('res')
-                res.innerHTML = `Nombre: ${tNombre}<br>`
-                res.innerHTML += `Edad: ${edad} años`
+                res.innerHTML = `Name: ${tName}<br>`
+                res.innerHTML += `Age: ${age} years old`
             }
         }
         
