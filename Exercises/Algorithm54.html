@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algoritmo 54</title>
+    <title>Algorithm 54</title>
     <style>
         h1{
             text-align: center;
@@ -26,46 +26,44 @@
     </style>
 </head>
 <body>
-    <h1>Algoritmo 54</h1>
+    <h1>Algorithm 54</h1>
     <div>
-        <h2>Tarea</h2>
+        <h2>Task</h2>
         <p>
-            Ingrese <strong>base, altura</strong> e imprima el área de un triángulo (en cm):
+            Enter <strong>base, height</strong> and print the area of a triangle (in cm):
         </p>
         
         Base: <input type="number" name="" id="base"><br>
-        Altura: <input type="number" name="" id="altura"><br>
-        <input type="button" value="calcular" onclick="calcular()">
+        Height: <input type="number" name="" id="height"><br>
+        <input type="button" value="calculate" onclick="triangle()">
 
     </div>
 
     <div class="div2">
-        <h3>Resultado</h3>
+        <h3>Result</h3>
         <p id="res"></p>
     </div>
 
     <script>
-        function calcular(){
+
+        function triangle(){
 
             let tBase = document.getElementById('base').value
-            let tAltura = document.getElementById('altura').value
+            let tHeight = document.getElementById('height').value
             let base = Number(tBase)
-            let altura = Number(tAltura)
+            let height = Number(tHeight)
 
-            if ((tBase.length == 0) || (tAltura.length == 0)){
+            if ((tBase.length == 0) || (tHeight.length == 0)){
+                window.alert('Insert all data!')
 
-                window.alert('Ingrese los datos')
-
-            } else if ((tBase < 0) || (tAltura < 0)) {
-
-                window.alert('Ha ingresado datos negativos')
+            } else if ((tBase < 0) || (tHeight < 0)) {
+                window.alert('You have inserted negative numbers')
 
             } else {
-
                 let res = document.getElementById('res')
-                let area = (base * altura) / 2
+                let area = (base * height) / 2
 
-                res.innerHTML = `Área: ${area}`
+                res.innerHTML = `Area: ${area}`
             }    
         }
         
